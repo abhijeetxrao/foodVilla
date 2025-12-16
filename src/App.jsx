@@ -6,6 +6,7 @@ import About from './pages/About.jsx'
 import Cart from './pages/Cart.jsx'
 import Contact from './pages/Contact.jsx'
 import Layout from './components/Layout.jsx'
+import RestaurantMenu from './pages/RestaurantMenu.jsx'
 
 function App() {
   
@@ -17,7 +18,8 @@ function App() {
           <Route index element = {<Home/>}/>
           <Route path = '/about' element = {<About/>}/>
           <Route path = '/contact' element = {<Contact/>}/>
-          <Route path = '/cart' element = {<Cart/>}/> 
+          <Route path = '/cart' element = {<Cart/>}/>
+          <Route path = '/restaurant/:id' element = {<RestaurantMenu/>}/>
         </Route>
       </Routes>
     </div>
