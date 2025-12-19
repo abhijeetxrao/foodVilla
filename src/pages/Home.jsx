@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../components/Card.jsx"
 import ShimmerUI from "../components/ShimmerUI.jsx"
+import useStatus from "../utils/useStatus.jsx"
+
 function Home() {
 
   const [restaurant, setRestaurant] = useState([])
   const [filteredRes, setFilteredRes] = useState([]);
   const[input,setInput] = useState("")
+  const status = useStatus();
 
   useEffect(() => {
-
     fetchRestaurants();
   }, []);
 
@@ -42,6 +44,10 @@ function Home() {
       const data = restaurant.filter((res)=>res.info.name.toLowerCase().includes(input.toLowerCase()));
       setFilteredRes(data);
       console.log(data)
+    }
+
+    if(!status){
+      return <h1>You are offline</h1>
     }
 
   return (filteredRes.length===0?(<ShimmerUI/>):

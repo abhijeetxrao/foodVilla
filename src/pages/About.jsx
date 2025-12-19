@@ -1,8 +1,12 @@
 import React from 'react'
+import { Outlet } from 'react-router'
 
 function About() {
   return (
-    <div>About</div>
+    <div>
+      <div>About</div>
+      <Outlet/>
+    </div>
   )
 }
 
