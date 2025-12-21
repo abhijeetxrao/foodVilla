@@ -7,7 +7,6 @@ const useRestaurant = (id)=>{
   useEffect(() => {
     fetchRes();
   }, []);
-
   const fetchRes = async () => {
     const response = await axios.get(
       `/swiggy/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5131443&lng=77.479608&restaurantId=${id}&submitAction=ENTER`
@@ -33,7 +32,6 @@ const useRestaurant = (id)=>{
     );
 
     setItemCategories(categories || []);
-    console.log(itemCategories);
   }
   return {itemCategories,cloudinaryImageId};
 }

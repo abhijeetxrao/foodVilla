@@ -11,10 +11,6 @@ function Home() {
   const[input,setInput] = useState("")
   const status = useStatus();
 
-  useEffect(() => {
-    fetchRestaurants();
-  }, []);
-
   // useEffect(()=>{
   //   filterData();
   // },[input])
@@ -39,6 +35,11 @@ function Home() {
         console.error("Error fetching Swiggy data:", error);
       }
     };
+
+    useEffect(() => {
+    fetchRestaurants();
+  }, []);
+
 
     const filterData = ()=>{
       const data = restaurant.filter((res)=>res.info.name.toLowerCase().includes(input.toLowerCase()));

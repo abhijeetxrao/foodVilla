@@ -3,7 +3,7 @@ import React from 'react'
 import logo from '../assets/logo.webp'
 import {Link} from 'react-router'
 function Navbar() {
-  const navLink = ["Home","About","Contact","Cart"];
+  const navLink = ["Home","About","Contact","Cart","InstaMart"];
 
   return (
     <div className='p-8 m-4 border border-black w-full flex justify-between'>
