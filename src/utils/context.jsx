@@ -1,14 +1,15 @@
-import { createContext, useState} from "react";
+import { CartProvider } from './utils/CartContext.jsx' // Import Provider
 
-// export const UserContext = createContext(null)
-
-export const UserProvider = ({children})=>{
-  const [user, setUser] =  useState({
-    name:"Dummy",
-    email:"abhi@gmail.com"
-  })
-  return <UserContext.Provider value = {{user, setUser}}>
-    {children}
-  </UserContext.Provider> 
+function App() {
+  return (
+    <CartProvider> {/* Wrap everything here */}
+      <div>
+        <Routes>
+          <Route path = '/' element = {<Layout/>}>
+            {/* ... your existing routes ... */}
+          </Route>
+        </Routes>
+      </div>
+    </CartProvider>
+  )
 }
-

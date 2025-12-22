@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/swiggy/:path*",
+      "destination": "https://www.swiggy.com/:path*"
+    }
+  ]
+}
