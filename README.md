@@ -1,16 +1,56 @@
-# React + Vite
+# 🍔 Foodie App - High-Performance Food Delivery UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, fast, and responsive food ordering web application built with **React**, **Vite**, and **Tailwind CSS**. This project leverages Swiggy's live API to provide real-time restaurant data, featuring a robust global state management system and modern UI/UX principles.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## 🚀 Live Demo
+https://food-villa-green.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+- **Real-Time Data Fetching:** Integrates with live Swiggy APIs to display actual restaurants and menus based on location.
+- **Global Cart System:** Implemented using **React Context API** for seamless state sharing between the menu and the navigation bar.
+- **Modern UI/UX:**
+  - **Custom Shimmer UI:** Hand-crafted skeleton loaders for both Home and Menu pages to reduce perceived loading time.
+  - **Glassmorphism Navbar:** A sticky, blurred-background navigation bar for a premium feel.
+  - **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewports.
+- **Advanced Routing:** Built with `react-router-dom`, supporting nested routes (Profile inside About) and dynamic URL parameters for restaurants.
+- **Performance Optimization:** - **Lazy Loading:** InstaMart module is bundled separately using `React.lazy` and `Suspense`.
+  - **Custom Hooks:** Clean separation of concerns with logic extracted into `useRestaurant`, `useStatus`, and `useCart`.
+- **CORS Proxy:** Configured Vite dev-server proxy to handle cross-origin requests during development.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React 18
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS (Modern Utility-First approach)
+- **State Management:** Context API
+- **Routing:** React Router
+- **Data Fetching:** Axios
+- **Icons:** SVG-based iconography
+
+
+
+---
+
+## 📂 Project Highlights
+
+### **Context API Logic**
+The cart manages adding items, removing items, and quantity toggles (`+` / `-`) globally. It also persists data to `localStorage` so your cart isn't lost on page refresh.
+
+### **Custom Hooks**
+- `useRestaurant(id)`: Fetches and cleans complex nested API data for specific restaurants.
+- `useStatus()`: Detects if the user has lost internet connection and displays an "Offline" screen.
+
+---
+
+## ⚙️ Setup & Installation
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/abhijeetxrao/foodVilla.git
+   cd foodVilla
+   
