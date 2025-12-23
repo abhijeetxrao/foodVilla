@@ -1,6 +1,5 @@
 import React from "react";
 
-// Shimmer for the Home Page (Grid of Cards)
 export const ShimmerUI= () => {
   return (
     <div className="max-w-7xl mx-auto px-4 mt-10">
@@ -9,7 +8,7 @@ export const ShimmerUI= () => {
         <div className="h-14 w-full max-w-lg bg-gray-200 rounded-full animate-pulse"></div>
       </div>
 
-      {/* Grid of Cards Placeholder */}
+     
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {Array(8).fill("").map((_, index) => (
           <div key={index} className="flex flex-col gap-4">
@@ -29,14 +28,14 @@ export const ShimmerUI= () => {
 export const AboutShimmer = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Shimmer */}
+
       <div className="h-[400px] bg-gray-200 animate-pulse flex flex-col items-center justify-center space-y-4 px-4">
         <div className="h-12 w-2/3 md:w-1/2 bg-gray-300 rounded-lg"></div>
         <div className="h-12 w-1/2 md:w-1/3 bg-gray-300 rounded-lg"></div>
         <div className="h-6 w-3/4 md:w-2/3 bg-gray-300 rounded-lg"></div>
       </div>
 
-      {/* Feature Grid Shimmer */}
+  
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[1, 2, 3].map((i) => (
@@ -50,7 +49,7 @@ export const AboutShimmer = () => {
         </div>
       </div>
 
-      {/* Profile Box Shimmer */}
+     
       <div className="max-w-4xl mx-auto pb-20 px-6">
         <div className="h-64 bg-gray-50 border-2 border-dashed border-gray-200 rounded-3xl flex flex-col items-center justify-center space-y-4 animate-pulse">
           <div className="h-8 w-1/2 bg-gray-200 rounded"></div>

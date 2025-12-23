@@ -71,7 +71,7 @@ function Home() {
 
       <hr className="mb-8 border-gray-100" />
 
-      {/* Results Section */}
+   
       {filteredRes.length === 0 ? (
         <div className="text-center py-20">
           <h2 className="text-xl text-gray-400">No restaurants found matching "{input}"</h2>

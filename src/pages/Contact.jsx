@@ -6,14 +6,13 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    // Logic for form submission would go here
+    
   };
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        
-        {/* Header */}
+     
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-black text-gray-800 mb-4">
             We're here to <span className="text-orange-500">help.</span>
@@ -26,7 +25,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
-          {/* Support Cards */}
+         
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">Quick Support</h2>
             
@@ -58,7 +57,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+         
           <div className="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 border border-gray-100">
             {submitted ? (
               <div className="text-center py-12">

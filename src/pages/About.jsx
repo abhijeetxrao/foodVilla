@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      
       <div className="relative h-[400px] flex items-center justify-center text-center px-4 bg-orange-500 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
@@ -36,7 +36,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Feature Section */}
+
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <FeatureCard emoji="🚀" title="Fast Delivery" desc="Lightning fast delivery in under 30 minutes to keep your hunger at bay." />
@@ -45,7 +45,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Profile Section */}
+     
       <div className="max-w-4xl mx-auto pb-20 px-6">
         <div className="bg-white border-2 border-dashed border-gray-200 rounded-3xl p-10 text-center">
           {!isProfilePage ? (
@@ -71,7 +71,6 @@ const About = () => {
   );
 };
 
-// Reusable Helper Component for the Feature Cards
 const FeatureCard = ({ emoji, title, desc }) => (
   <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
     <div className="text-4xl mb-4">{emoji}</div>

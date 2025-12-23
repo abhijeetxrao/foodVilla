@@ -17,7 +17,7 @@ const InstaMart = lazy(() => import('./pages/InstaMart.jsx'))
 
 function App() {
   return (
-    // 2. Wrap everything inside CartProvider
+   
     <CartProvider>
       <div>
         <Routes>

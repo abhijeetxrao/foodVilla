@@ -23,7 +23,7 @@ function Footer() {
           </p>
         </div>
 
-        {/* Navigation Links */}
+       
         <div>
           <h4 className="font-bold text-lg mb-6">Company</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
@@ -34,7 +34,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Contact/Support */}
+      
         <div>
           <h4 className="font-bold text-lg mb-6">Contact Us</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
@@ -44,7 +44,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Locations/Social */}
+        
         <div>
           <h4 className="font-bold text-lg mb-6">Available in</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
@@ -56,14 +56,14 @@ function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-800 flex flex-col md:row justify-between items-center gap-4">
         <p className="text-gray-500 text-xs">
           © {currentYear} Foodie Technologies Pvt. Ltd. All rights reserved.
         </p>
         
         <div className="flex gap-6">
-          {/* Simple Social Icons */}
+     
           <a href="#" className="text-gray-400 hover:text-white transition-colors">
             <i className="fa-brands fa-linkedin text-xl"></i>
           </a>

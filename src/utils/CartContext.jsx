@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 
-// 1. Create the Context with default values
+
 export const CartContext = createContext({
   items: [],
   totalPrice: 0,
@@ -23,7 +23,6 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(items));
   }, [items]);
 
-  // ACTION: Add item to cart
   const addToCart = (product) => {
     setItems((prevItems) => {
       const isItemInCart = prevItems.find((item) => item.id === product.id);
@@ -36,17 +35,16 @@ export const CartProvider = ({ children }) => {
             : item
         );
       }
-      // If item is new, add it with quantity 1
+     
       return [...prevItems, { ...product, quantity: 1 }];
     });
   };
 
-  // ACTION: Remove specific item
   const removeFromCart = (id) => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
-  // ACTION: Increase/Decrease Quantity
+
   const updateQuantity = (id, type) => {
     setItems((prevItems) =>
       prevItems.map((item) => {
@@ -61,7 +59,6 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = () => setItems([]);
 
-  // DERIVED STATE: Calculate totals on the fly
   const totalItems = items.reduce((acc, curr) => acc + (curr.quantity || 0), 0);
   const totalPrice = items.reduce((acc, curr) => acc + (curr.price / 100) * curr.quantity, 0);
 

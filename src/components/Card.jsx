@@ -25,7 +25,7 @@ function Card({ props }) {
             alt={name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          {/* Discount Overlay (Optional - usually found in Swiggy API as aggregatedDiscountInfoV3) */}
+          
           <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent flex items-end p-3">
             <span className="text-white font-black text-lg uppercase">
                {props.info?.aggregatedDiscountInfoV3?.header || "Best in Safety"}

@@ -8,7 +8,6 @@ function RestaurantMenu() {
   const { itemCategories, cloudinaryImageId } = useRestaurant(id);
   const { addToCart, items } = useContext(CartContext);
 
-  // Helper to check if item is already in cart to show count
   const getItemCount = (itemId) => {
     const item = items.find((i) => i.id === itemId);
     return item ? item.quantity : 0;
@@ -16,7 +15,7 @@ function RestaurantMenu() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      {/* Header Section */}
+    
       <div className="flex flex-col md:flex-row gap-8 items-center border-b pb-8 mb-8">
         {cloudinaryImageId && (
           <img
@@ -35,7 +34,7 @@ function RestaurantMenu() {
         </div>
       </div>
 
-      {/* Menu Categories */}
+
       <div className="space-y-8">
         {itemCategories.map((category, index) => (
           <div key={index} className="bg-gray-50 rounded-3xl p-6 shadow-sm">
@@ -75,7 +74,7 @@ function RestaurantMenu() {
                         <div className="w-32 h-24 bg-gray-100 rounded-xl flex items-center justify-center text-gray-300 text-xs">No Image</div>
                       )}
                       
-                      {/* Interactive Add Button */}
+                     
                       <button 
                         onClick={() => addToCart(itemInfo)}
                         className={`absolute -bottom-2 px-6 py-2 rounded-lg font-bold text-sm shadow-md transition-all active:scale-95

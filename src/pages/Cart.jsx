@@ -41,7 +41,7 @@ function Cart() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        {/* Left: Items List */}
+      
         <div className="lg:col-span-2 space-y-6">
           {items.map((item) => (
             <div key={item.id} className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
@@ -82,7 +82,6 @@ function Cart() {
           ))}
         </div>
 
-        {/* Right: Order Summary */}
         <div className="lg:col-span-1">
           <div className="bg-gray-50 p-6 rounded-3xl sticky top-24">
             <h2 className="text-xl font-bold text-gray-800 mb-6">Bill Details</h2>
